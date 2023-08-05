@@ -6,141 +6,113 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
-    <TextView
-        android:id="@+id/text00"
-        android:layout_width="70dp"
-        android:layout_height="48dp"
-        android:gravity="center"
-        android:text="No"
-        app:layout_constraintEnd_toStartOf="@+id/scroll"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <HorizontalScrollView
-        android:id="@+id/scroll"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="200dp"
-        android:layout_marginEnd="200dp"
+    <View
+        android:id="@+id/testInfoView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#8BC34A"
+        app:layout_constraintBottom_toTopOf="@id/testListView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_weight="1" />
+
+    <ScrollView
+        android:id="@+id/testListView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:overScrollMode="never"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/testInfoView"
+        app:layout_constraintVertical_weight="2">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <LinearLayout
+                android:id="@+id/testListView002"
+                android:layout_width="1400dp"
+                android:layout_height="wrap_content"
+                android:background="#0ff"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/testListView001"
+                app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/text02"
-                android:layout_width="90dp"
-                android:layout_height="48dp"
-                android:gravity="center"
-                android:text="상품코드"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                <!--
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#FFEB3B"
+                    android:text="12345678901234567890123456789012345678901234567890"
+                    android:textSize="24dp" />
+                    -->
 
-            <TextView
-                android:id="@+id/text03"
-                android:layout_width="200dp"
-                android:layout_height="48dp"
-                android:gravity="center"
-                android:text="상품명\n배차번호(UDI)"
-                app:layout_constraintStart_toEndOf="@+id/text02"
-                app:layout_constraintTop_toTopOf="@+id/text02" />
+            </LinearLayout>
 
-            <TextView
-                android:id="@+id/text04"
-                android:layout_width="90dp"
-                android:layout_height="48dp"
-                android:gravity="center"
-                android:text="P-CODE"
-                app:layout_constraintStart_toEndOf="@+id/text03"
-                app:layout_constraintTop_toTopOf="@+id/text02" />
+            <LinearLayout
+                android:id="@+id/testListView001"
+                android:layout_width="140dp"
+                android:layout_height="wrap_content"
+                android:background="#f00"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/testListView002"
+                app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/text05"
-                android:layout_width="90dp"
-                android:layout_height="48dp"
-                android:gravity="center"
-                android:text="로케이션"
-                app:layout_constraintStart_toEndOf="@+id/text04"
-                app:layout_constraintTop_toTopOf="@+id/text02" />
+                <!--
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:background="#FF9800"
+                    android:text="1234567890"
+                    android:textSize="24dp" />
+                    -->
 
-            <TextView
-                android:id="@+id/text06"
-                android:layout_width="90dp"
-                android:layout_height="48dp"
-                android:gravity="center"
-                android:text="재고수량"
-                app:layout_constraintStart_toEndOf="@+id/text05"
-                app:layout_constraintTop_toTopOf="@+id/text02" />
-
-            <TextView
-                android:id="@+id/text07"
-                android:layout_width="90dp"
-                android:layout_height="48dp"
-                android:gravity="center"
-                android:text="실사수량"
-                app:layout_constraintStart_toEndOf="@+id/text06"
-                app:layout_constraintTop_toTopOf="@+id/text02" />
-
-            <TextView
-                android:id="@+id/text08"
-                android:layout_width="70dp"
-                android:layout_height="48dp"
-                android:gravity="center"
-                android:text="단위"
-                app:layout_constraintStart_toEndOf="@+id/text07"
-                app:layout_constraintTop_toTopOf="@+id/text02" />
-
-            <TextView
-                android:id="@+id/text09"
-                android:layout_width="90dp"
-                android:layout_height="48dp"
-                android:gravity="center"
-                android:text="재고상태\n저장위치"
-                app:layout_constraintStart_toEndOf="@+id/text08"
-                app:layout_constraintTop_toTopOf="@+id/text02" />
-
-            <TextView
-                android:id="@+id/text10"
-                android:layout_width="90dp"
-                android:layout_height="48dp"
-                android:gravity="center"
-                android:text="제조일자\n유통기한"
-                app:layout_constraintStart_toEndOf="@+id/text09"
-                app:layout_constraintTop_toTopOf="@+id/text02" />
-
-            <TextView
-                android:id="@+id/text11"
-                android:layout_width="90dp"
-                android:layout_height="48dp"
-                android:gravity="center"
-                android:text="입고일자"
-                app:layout_constraintStart_toEndOf="@+id/text10"
-                app:layout_constraintTop_toTopOf="@+id/text02" />
-
-            <TextView
-                android:id="@+id/text12"
-                android:layout_width="110dp"
-                android:layout_height="48dp"
-                android:gravity="center"
-                android:text="코멘트"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@+id/text11"
-                app:layout_constraintTop_toTopOf="@+id/text02" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/list"
-                android:layout_width="match_parent"
-                android:layout_height="0dp"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                app:layout_constraintTop_toBottomOf="@+id/text12"
-                tools:listitem="@layout/listitem" />
-
+            </LinearLayout>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-    </HorizontalScrollView>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/testHeaderView002"
+        android:layout_width="1400dp"
+        android:layout_height="40dp"
+        android:background="#009688"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/testListView"
+        app:layout_constraintStart_toEndOf="@id/testHeaderView001">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:maxLines="1"
+            android:text="12345678901234567890123456789012345678901234567890"
+            android:textSize="24dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/testHeaderView001"
+        android:layout_width="140dp"
+        android:layout_height="40dp"
+        android:background="#E91E63"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/testListView"
+        app:layout_constraintEnd_toStartOf="@id/testHeaderView002"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="1234567890"
+            android:textSize="24dp" />
+
+    </LinearLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
